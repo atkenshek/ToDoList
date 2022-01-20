@@ -1,16 +1,13 @@
 package com.company;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public interface IToDoList {
 
     Scanner scanner = new Scanner(System.in);
-    static void showList(){};
-    static void addItem(){};
-    static void removeItem(){};
-    public static int menu() {
+    static void showList(){}
+    static void addItem(){}
+    static void removeItem(){}
+    static int menu() {
         System.out.println();
         System.out.println("----------------------");
         System.out.println("Main Menu");
@@ -21,7 +18,6 @@ public interface IToDoList {
         System.out.println("3. Remove item from list");
         System.out.println();
         System.out.print("Enter choice: ");
-        int choice = scanner.nextInt();
-        return choice;
+        return scanner.nextInt();
     }
 }
