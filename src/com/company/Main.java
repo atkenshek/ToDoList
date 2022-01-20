@@ -1,24 +1,22 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        ToDoList toDoList = new ToDoList();
         int menuItem = -1;
         while (menuItem != 0) {
-            menuItem = IToDoList.menu();
+            menuItem = toDoList.menu();
             switch (menuItem) {
                 case 1:
-                    ToDoList.showList();
+                    toDoList.showList();
                     break;
                 case 2:
-                    ToDoList.addItem();
+                    toDoList.addItem();
                     break;
                 case 3:
-                    ToDoList.removeItem();
+                    toDoList.removeItem();
                     break;
                 case 0:
                     break;

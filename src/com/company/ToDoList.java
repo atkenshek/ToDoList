@@ -5,8 +5,24 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ToDoList implements IToDoList {
-    static List<String> currentList = new ArrayList<String>();
-    public static void showList() {
+    public ToDoList() {}
+
+    List<String> currentList = new ArrayList<>();
+    public int menu() {
+        System.out.println();
+        System.out.println("----------------------");
+        System.out.println("Main Menu");
+        System.out.println("----------------------");
+        System.out.println("0. Exit the program");
+        System.out.println("1. Display to-do list");
+        System.out.println("2. Add item to list");
+        System.out.println("3. Remove item from list");
+        System.out.println();
+        System.out.print("Enter choice: ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+    public void showList() {
         System.out.println();
         System.out.println("----------------------");
         System.out.println("To-Do List");
@@ -18,7 +34,7 @@ public class ToDoList implements IToDoList {
         System.out.println("----------------------");
 
     }
-    public static void addItem() {
+    public void addItem() {
         System.out.println("Add Item");
         System.out.println("----------------------");
         System.out.print("Enter an item: ");
@@ -28,7 +44,7 @@ public class ToDoList implements IToDoList {
         showList();
     }
 
-    public static void removeItem() {
+    public void removeItem() {
         System.out.println("Remove Item");
         System.out.println("----------------------");
         Scanner scanner = new Scanner(System.in);
